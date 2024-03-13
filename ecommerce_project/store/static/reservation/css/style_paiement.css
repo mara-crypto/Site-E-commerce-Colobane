@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Rubik:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FEA116;
+    height: 100vh;
+}
+
+body div div{
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    height: auto;
+    padding: 10px;
+    border-radius: 20px;
+    width: 40%;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+    background-color: white;
+    flex-direction: column;
+}
+
+button{
+    padding: 10px;
+    margin: 10px;
+    width: 80%;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    transition: all 1s;
+}
+
+input{
+    padding: 5px;
+    width: 80%;
+    margin: 10px;
+}
+
+.qr_code{
+    display: none;
+    width: fit-content;
+}
+button:hover{
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 3px;
+    border-radius: 10px;
+    width: 90%;
+}
+#OM:hover{
+    background-color: orange;
+    color: white;
+    font-size: 20px;
+    font-family: 'Rubik', sans-serif;
+}
+
+#Wave:hover{
+    background-color: rgb(91, 188, 248);
+    color: white;
+    font-size: 20px;
+    font-family: cursive;
+}
+
+#FM:hover{
+    background-color: red;
+    color: white;
+    font-size: 25px;
+    font-family: 'Cookie', cursive;
+}

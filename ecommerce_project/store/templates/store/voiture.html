@@ -1,0 +1,127 @@
+{% extends './base.html'%}
+{% load static %}
+{% block content %}
+
+
+
+<!-- Page Header Start -->
+<div class="container-fluid page-header mb-5 p-5" style="background-image: url({% static 'reservation/image/v9.jpg' %});">
+    <div class="container-fluid page-header-inner py-5">
+        <div class="container text-center pb-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Location de Voiture</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center text-uppercase" style="background-color: initial;">
+                    <li class="breadcrumb-item"><a href="{% url 'index'%}">Home</a></li>                        
+                    <li class="breadcrumb-item"><a href="{% url 'contact'%}">Contact</a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'about'%}">About</a></li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+<!-- Page Header End -->
+
+
+<!-- Booking Start -->
+<div class="container-fluid booking pb-5 wow fadeIn" data-wow-delay="0.1s">
+<div class="container">
+<div class="bg-white shadow" style="padding: 35px;">
+    <form method="GET" action="{% url 'voiture' %}">
+        <div class="row g-2">
+            <div class="col-md-10">
+                <div class="row g-2">
+                    <div class="col-md-3">
+                        <div class="date" id="date1" data-target-input="nearest">
+                            <input type="text" class="form-control datetimepicker-input" name="date_debut" placeholder="Check in" data-target="#date1" data-toggle="datetimepicker" />
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="date" id="date2" data-target-input="nearest"> 
+                            <input type="text" class="form-control datetimepicker-input" name="date_fin" placeholder="Check out" data-target="#date2" data-toggle="datetimepicker"/>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <select class="form-select" id="hour1">
+                            <option selected disabled>Heure</option>
+                            <option value="0">00:00</option>
+                            <option value="1">01:00</option>
+                            <option value="2">02:00</option>
+                            <option value="3">03:00</option>
+                            <option value="4">04:00</option>
+                            <option value="5">05:00</option>
+                            <!-- Ajoutez les options pour les heures jusqu'à 23 -->
+                        </select>
+                    </div>
+
+                    <div class="col-md-3">
+                        <select class="form-select" id="hour2">
+                            <option selected disabled>Heure</option>
+                            <option value="0">00:00</option>
+                            <option value="1">01:00</option>
+                            <option value="2">02:00</option>
+                            <option value="3">03:00</option>
+                            <option value="4">04:00</option>
+                            <option value="5">01:00</option>
+                            <!-- Ajoutez les options pour les heures jusqu'à 23 -->
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-primary w-100">Rechercher</button>
+            </div>
+        </div>
+    </form>
+</div>
+</div>
+</div>
+<!-- Booking End -->
+
+
+
+<!-- About Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5 align-items-center justify-content-center">
+            <div class="col-lg-6">
+                <h6 class="section-title text-start text-primary text-uppercase">About Us</h6>
+                <h1 class="mb-4">POURQUOI CHOISIR <span class="text-primary text-uppercase">BOOKING LUXURY</span></h1>
+                <p class="mb-4" style="font-weight: 900;">BOOKING LUXURY est un acteur incontournable dans la location de voitures au Sénégal. 
+                                Louer chez BOOKING LUXURY, c’est non seulement faire le choix de l’expérience et de la confiance, 
+                                mais aussi opter pour notre expertise qui, depuis 20 ans, accompagne particuliers et professionnels dans le développement de leurs activités. 
+                                La solution de location BOOKING LUXURY, c’est la promesse :</p>
+                <ul class="mb-2">
+                    <li>D’une Assurance tous risques incluse sur toute notre flotte de véhicules</li>
+                    <li>De formules de location adaptées à vos besoins</li>
+                    <li>D’une assistance 24h/24</li>
+                    <li>D’un large choix de véhicules</li>
+                    <li>D’un parc automobile moderne et de dernière génération</li>
+                </ul>
+                <p class="mb-4" style="font-weight: 900;">Plus qu’un simple service, BOOKINK LUXURY est VOTRE partenaire pour une location fiable et des voyages réussis.
+                    Avec BOOKINK LUXURY, louez en toute liberté !</p>
+                
+    
+            </div>
+            
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+
+
+
+<!-- Team Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-3">
+            <div class="col-12">
+                <img style="width: 200%; max-width: 1500px; height: auto;" class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s" src="{% static 'reservation/image/mes_voiture.png'%}">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Team End -->
+
+
+{% endblock %}
